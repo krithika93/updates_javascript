@@ -35,6 +35,13 @@ h1, h2 {
  padding:0.5em;
  
 }
+#one
+{
+
+height:0px;
+
+
+}
 
 </style>
 <script type="text/javascript">
@@ -52,16 +59,27 @@ var temp4;
 var temp;
  var hello=new Array("one","two");
  var func;
- var height;
+ var height=200;
+ var count;
 //document.write(hello[0]).style.color="red";
+ var change;
+function change()
+{
+one.style.height='50px';
+
+
+}		
+
+
+//return from the function
 
 function doMove()
  {
-/*var i=0;
-var count=4; var one=0;*/
+ 
 
 if(parseInt(five.style.top) == 40)
 		{
+		
 		 var temp1=two.innerHTML;
 		 var temp2=three.innerHTML;
 		 var temp3=four.innerHTML;
@@ -81,40 +99,15 @@ if(parseInt(five.style.top) == 40)
 		five.style.top='20px';
 
 		}
-		
-one.style.top = parseInt(one.style.top)+5+'px';
+	
+
+//one.style.top = parseInt(one.style.top)+5+'px';
 two.style.top= parseInt(two.style.top)+5+'px';
 three.style.top = parseInt(three.style.top)+5+'px';
 four.style.top= parseInt(four.style.top)+5+'px';
 five.style.top = parseInt(five.style.top)+5+'px';
 
 
-
-
-/* if(i==count)
-  {
-	for(i=0;i<4;i++)
-	{
-	  if(i==0)
-	{
-	 document.getElementBy(0).innerHtml=document.getElementByid(count).innerHtml;
-	
-	 }
-	 
-	 else
-	 {
-	 
-	 document.getElementByid(i+1).innerHtml=document.getElementByid(i).innerHtml;
-
-	 
-	 }
-	 
-	 } 
-*/
-   
-   // call doMove in 20msec
-
-	
 }
 
 function init()
@@ -133,7 +126,7 @@ five=document.getElementById('five');
  three.style.top = '10px';
  four.style.top = '15px';
  five.style.top = '20px';
- var count=0;
+// var count=0;
 
 /*if(count == 500)
 {
@@ -143,13 +136,20 @@ count++;*/
 setInterval(function(){doMove()},1000);
 
 
+//one.style.height='0px';
+
+//setTimeout(function(){appear()},300);
+setTimeout(function(){change()},1000);
+
+
+   
+   // call doMove in 20msec
+
+	
+
+
 }
-//}
-//var i;
-//for(i=0;i<100;i++)
-//{
-//doMove();
-//}
+
 window.onload = init;
 
 </script>
