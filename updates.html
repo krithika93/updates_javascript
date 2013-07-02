@@ -1,0 +1,180 @@
+
+<html>
+<head>
+<title>Demo</title>
+<style type="text/css">
+
+body {
+ font:76% normal verdana,arial,tahoma;
+}
+
+h1, h2 {
+ font-size:1em;
+}
+#good {
+ /* simple box */
+ /*position:absolute; */
+ list-style:none;
+ border:1px solid #003366;
+ overflow:hidden;
+}
+
+#one,#two,#three,#four,#five {
+ /* simple box */
+ position:relative; 
+ left:0px;
+ display:block;
+ height: 20px;
+ margin-left:0px;
+ /*top:8em;*/
+ width:250px;
+ line-height:3em;
+ background:#99ccff;
+ border:1px solid #003366;
+ white-space:nowrap;
+ padding:0.5em;
+ 
+}
+
+</style>
+<script type="text/javascript">
+//var foo = null; // object
+var one=null;
+// start animating
+var two=null;
+var three=null;
+var four=null;
+var five=null;
+var temp1;
+var temp2;
+var temp3;
+var temp4;
+var temp;
+ var hello=new Array("one","two");
+ var func;
+ var height;
+//document.write(hello[0]).style.color="red";
+
+function doMove()
+ {
+/*var i=0;
+var count=4; var one=0;*/
+
+if(parseInt(five.style.top) == 40)
+		{
+		 var temp1=two.innerHTML;
+		 var temp2=three.innerHTML;
+		 var temp3=four.innerHTML;
+		 var temp4=five.innerHTML;
+		 var temp=one.innerHTML;
+		//document.write(document.getElementById('two').innerHtml);		
+		one.innerHTML=five.innerHTML;	
+		two.innerHTML=temp;
+		three.innerHTML=temp1;
+		four.innerHTML=temp2;
+		five.innerHTML=temp3;
+	
+		one.style.top= '0px';
+		two.style.top= '5px';
+		three.style.top='10px';
+		four.style.top='15px';
+		five.style.top='20px';
+
+		}
+		
+one.style.top = parseInt(one.style.top)+5+'px';
+two.style.top= parseInt(two.style.top)+5+'px';
+three.style.top = parseInt(three.style.top)+5+'px';
+four.style.top= parseInt(four.style.top)+5+'px';
+five.style.top = parseInt(five.style.top)+5+'px';
+
+
+
+
+/* if(i==count)
+  {
+	for(i=0;i<4;i++)
+	{
+	  if(i==0)
+	{
+	 document.getElementBy(0).innerHtml=document.getElementByid(count).innerHtml;
+	
+	 }
+	 
+	 else
+	 {
+	 
+	 document.getElementByid(i+1).innerHtml=document.getElementByid(i).innerHtml;
+
+	 
+	 }
+	 
+	 } 
+*/
+   
+   // call doMove in 20msec
+
+	
+}
+
+function init()
+{
+ // get the "foo" object
+
+one=document.getElementById('one');
+two=document.getElementById('two');
+three=document.getElementById('three');
+four=document.getElementById('four');
+five=document.getElementById('five');
+
+
+ one.style.top = '0px'; // set its initial position to 0px
+ two.style.top = '5px';
+ three.style.top = '10px';
+ four.style.top = '15px';
+ five.style.top = '20px';
+ var count=0;
+
+/*if(count == 500)
+{
+	
+}		
+count++;*/
+setInterval(function(){doMove()},1000);
+
+
+}
+//}
+//var i;
+//for(i=0;i<100;i++)
+//{
+//doMove();
+//}
+window.onload = init;
+
+</script>
+</head>
+
+<body>
+
+<h1>LIVE</h1>
+<h2>updates</h2>
+<ul id="good" style="color:red; height:289px; width:250px;">
+<li id="one">
+ I am foo
+</li>
+<li id="two">
+ I am good
+</li>
+<li id="three">
+ I am normal
+</li>
+<li id="four">
+ I am ok
+</li>
+<li id="five">
+ I am fine
+</li>
+</ul>
+</body>
+</html>
