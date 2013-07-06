@@ -35,7 +35,7 @@ h1, h2 {
  padding:0.5em;
  
 }
-#one
+#one,#two,#three,#four,#five
 {
 height:0px;
 transition:height 2s;
@@ -68,7 +68,7 @@ var temp;
 function change()
 {
 
-one.style.height='30px';
+one.style.height='60px';
 
 
 }
@@ -87,7 +87,7 @@ function doMove()
  {
 
 
-if(parseInt(four.style.top) == 80)
+if(parseInt(four.style.top) == 50)
 		{
 		
 		 var temp1=two.innerHTML;
@@ -103,9 +103,9 @@ if(parseInt(four.style.top) == 80)
 		five.innerHTML=temp3;
 	
 		one.style.top= '0px';
-		two.style.top= '5px';
-		three.style.top='10px';
-		four.style.top='15px';
+		//two.style.top= '5px';
+		//three.style.top='10px';
+		//four.style.top='15px';
 		five.style.top='20px';
 		//keep count variable here
 		}
@@ -150,8 +150,8 @@ five=document.getElementById('five');
 count++;*/
 //pass a variable
 //setInterval(function(){change()},1000);
-setInterval(function(){doMove()},1000);
-setInterval(function(){change()},1500);
+setInterval(function(){doMove()},500);
+setInterval(function(){change()},2000);
 
 
 
@@ -181,6 +181,7 @@ window.onload = init;
 <li id="one">
  I am foo
 </li>
+<div id="main">
 <li id="two">
  I am good
 </li>
@@ -190,6 +191,7 @@ window.onload = init;
 <li id="four">
  I am ok
 </li>
+</div>
 <li id="five">
  I am fine
 </li>
