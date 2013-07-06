@@ -50,9 +50,7 @@ transition:top 2s;
 //var foo = null; // object
 //var one=null;
 // start animating
-var two=null;
-var three=null;
-var four=null;
+var main;
 var five=null;
 var temp1;
 var temp2;
@@ -106,7 +104,7 @@ if(parseInt(four.style.top) == 50)
 		//two.style.top= '5px';
 		//three.style.top='10px';
 		//four.style.top='15px';
-		five.style.top='20px';
+		five.style.top='20px';//how come only 20 here?
 		//keep count variable here
 		}
 
@@ -115,11 +113,11 @@ if(parseInt(four.style.top) == 50)
 setInterval(function(){func1()},1000);
 	//one.style.height='0px';
 	
-
+main.style.top=parseInt(main.style.top)+10+'px';
 //one.style.top = parseInt(one.style.top)+5+'px';
-two.style.top= parseInt(two.style.top)+5+'px';
-three.style.top = parseInt(three.style.top)+5+'px';
-four.style.top= parseInt(four.style.top)+5+'px';
+//two.style.top= parseInt(two.style.top)+5+'px';
+//three.style.top = parseInt(three.style.top)+5+'px';
+//four.style.top= parseInt(four.style.top)+5+'px';
 //five.style.top = parseInt(five.style.top)+5+'px';
 	
 
@@ -130,11 +128,9 @@ function init()
  // get the "foo" object
 
 one=document.getElementById('one');
-two=document.getElementById('two');
-three=document.getElementById('three');
-four=document.getElementById('four');
+main=document.getElementById('main');
 five=document.getElementById('five');
-
+main.style.top='20px';//initial height
 
  one.style.top = '0px'; // set its initial position to 0px
  two.style.top = '20px';
